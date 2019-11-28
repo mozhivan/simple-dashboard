@@ -1,0 +1,13 @@
+node_modules/
+bundle/
+packages/
+npm-debug.log
+.vscode
+.meteor/dev_bundle
+errorShots
+testParams_local.js
+testResults
+test/downloads/
+.slink*
+package-lock.json
+test.log

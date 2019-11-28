@@ -1,0 +1,36 @@
+.pagination-dropdown-content
+  display none
+  position: absolute;
+  background-color: #f9f9f9
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 1
+  width: 6rem
+  bottom: 100%
+
+.pagination-dropdown span
+  display: inline-block
+  background-color: cadetblue
+  color white
+  text-transform uppercase
+  text-align center
+  font-size: 0.7rem
+  line-height: 1.7rem
+  width 6rem
+  margin: 2px
+  border-radius: 5px
+  &:hover
+    background-image: linear-gradient(to top, #c6cacc 0%, #a0b0ba 100%)
+    color black
+
+.pagination-dropdown:hover .pagination-dropdown-content
+  display block
+
+.pagination-dropdown-content div
+  padding: 0.2em 0 0.2em
+  width: 100%
+  position relative
+  text-align: center
+  height: auto
+
+.pagination-dropdown-content div:hover
+  background-color: rgb(203, 210, 216)

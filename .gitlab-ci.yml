@@ -1,0 +1,40 @@
+image: node:latest
+
+variables:
+  METEOR_ALLOW_SUPERUSER: "true"
+
+stages:
+  - lint
+  - test
+  - deploy-staging
+  - deploy
+
+lint:
+  before_script:
+  - npm install
+  stage: lint
+  script: npm run lint
+
+test:
+  before_script:
+  - meteor npm install
+  stage: test
+  script: npm run test
+
+deploy dev:
+  when: manual
+  stage: deploy-staging
+  script: npm run deploy
+  environment:
+    name: production
+  only:
+  - dev
+
+deploy:
+  when: manual
+  stage: deploy
+  script: npm run deploy
+  environment:
+    name: production
+  only:
+  - master
